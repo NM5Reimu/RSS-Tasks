@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-size: cover;
+  color: #ffffff;
+  transition: background-image 1s ease-in;
+  text-shadow: 1px 1px 2px black;
+  
+}
+.others{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+.time{
+  font-size: calc(4vw + 2vh);
+}
+.today{
+  font-size: calc(3vw + 2vh);
+  margin-bottom: 20px;
+}
+
+
+h1 {
+  margin-bottom: 1.5vh;
+  font-size: calc(1.5vw + 1.5vh);
+}
+h2 {
+  margin-bottom: 1.7vh;
+  font-size: calc(1.5vw + 1.5vh);
+  opacity: 0.8;
+}
+
+.changeBackgroundBtn {
+  width: 5vh;
+  height: 5vh;
+  border: 0;
+  background: url("https://www.pngarts.com/files/7/Update-Button-PNG-Image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  margin: 10px;
+  opacity: 0.5;
+}
+.changeBackgroundBtn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.changeBackgroundBtn:active,
+.changeBackgroundBtn:focus {
+  outline: 0;
+}
+.changeBackgroundBtn:active{
+  transform: scale(1.02)
+}
+.weather {
+  font-size: calc(0.4em + 0.6vw + 0.6vh);
+  width: 250px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.quote{
+  width: 50vw;
+  font-size: calc(0.6vw + 0.6vh);
+}
+.quote .blockquote{
+  text-align: right;
+}
+.quote .figcaption{
+  text-align: right;
+}

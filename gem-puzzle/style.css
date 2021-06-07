@@ -1,0 +1,245 @@
+html{
+    width: 100%;
+    min-width: 320px;
+    font-family: "Arial", sans-serif;
+    color: #e6e6e6;
+    background: url(./assets/bg.png) fixed;
+    background-size: cover;
+    background-position: center;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    max-width: 600px;
+    min-width: 320px;
+    height: 100%;
+    margin: 0 auto; 
+    padding: 0; 
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.controlBlock{
+    width: 100%;
+    max-width: 600px;
+    min-width: 320px;
+    margin: 10px auto;
+}
+
+.infoBlock,
+.controlElements{
+    display: flex;
+    margin: 5px;
+}
+
+.controlElement{
+    background-color: #5a5a5a;
+    color: white;
+    border-radius: 3px;
+    padding: 7px;
+    margin: auto;
+}
+
+.controlElement:hover{
+    background-color: #ffffff;
+    color: #5a5a5a;
+}
+
+.infoElement{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 5px;
+    margin: auto;
+}
+
+.field {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    min-width: 320px;
+    max-height: 600px;
+    min-height: 320px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.puzzle8x8{
+    width: calc((100% - 32px)/8);
+}
+
+.puzzle7x7{
+    width: calc((100% - 28px)/7);
+}
+
+.puzzle6x6{
+    width: calc((100% - 24px)/6);
+}
+
+.puzzle5x5{
+    width: calc((100% - 20px)/5);
+}
+
+.puzzle4x4{
+    width: calc((100% - 16px)/4);
+}
+
+.puzzle3x3{
+    width: calc((100% - 12px)/3);
+}
+
+.puzzle{
+    display: flex;
+    align-items: center; justify-content: center;
+    background-color: rgb(71, 71, 71);
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 10%;
+    margin: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    font-size: 32px;
+    transition: 0.2s linear;
+}
+
+.puzzle:hover{
+    /* background-color: rgb(168, 167, 165);
+    border-color: rgb(83, 83, 83); */
+    opacity: 0.7;
+    transition: 0.2s linear;
+}
+
+.puzzle0{
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0);
+    font-size: 0;
+}
+
+/* .puzzle0:hover{
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+} */
+
+.puzzle1x1{
+    width: 100%;
+    font-size: 152px;
+    background-color: rgba(46, 46, 46, 0.404);
+    color: rgb(230, 230, 230);
+    border: none;
+    border-radius: 0%;
+}
+.puzzle1x1:hover{
+    width: 100%;
+    background-color: rgba(46, 46, 46, 0.404);
+    color: rgb(230, 230, 230);
+    border: none;
+    border-radius: 0%;
+    cursor: default;
+    opacity: 1;
+}
+
+
+
+.fontSize32{
+    font-size: 32px;
+}
+
+.puzzle:before {
+    content: "";
+    padding-top: 100%;
+    float: left;
+}
+
+.bestResults,
+.sizeSelection{    
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 0;
+    min-height: 0px;
+    max-width: 600px;
+    min-width: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+    color: #ffffff;
+    background-color: #313131;
+    transition: 0.3s;
+}
+
+.bestResultsActive,
+.sizeSelectionActive{
+    height: 100%;
+    max-height: 700px;
+    min-height: 320px;
+}
+
+.closeBestResultsBlock,
+.closeSizeBlock{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closeBestResultsBlock:hover,
+.closeSizeBlock:hover{
+    background-color: #ffffff;
+    color: #5a5a5a;
+    transition: 0.5s;
+}
+
+.bestResults > h2,
+.sizeSelection > h2{
+    text-align: center;
+    margin: 10px;
+}
+
+.bestResults > .results > .point{
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sizeSelection > .size > .point{
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    list-style-type: none;
+}
+.sizeSelection > .size{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.sizeSelection > .size > .point:hover{
+    background-color: #ffffff;
+    color: #5a5a5a;
+}
+
+@media screen and (max-width: 500px){
+
+    .puzzle1x1{
+        font-size: 52px;
+    }
+}
